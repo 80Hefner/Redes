@@ -74,13 +74,15 @@ estabilize).
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/parte1/topologia/core.png}
+    \frame{\includegraphics[width=0.7\textwidth]{images/parte1/topologia/core.png}}
     \caption{Topologia CORE}
 \end{figure}
 
 \vspace{0.5cm}
 
-\textbf{A - Ative o wireshark ou o tcpdump no pc h1. Numa shell de h1, execute o comando traceroute -I para o endereço IP do host s4.}
+\textbf{A - Active o wireshark ou o tcpdump no Cliente1. Numa shell do
+Cliente1, execute o comando traceroute -I para o endereço
+IP do Servidor1.}
 
 \begin{figure}[hbt!]
     \centering
@@ -96,7 +98,7 @@ Inicialmente, o Cliente1 tenta comunicar com o Servidor1, mas, como o TTL é igu
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/topologia/trafego_icmp.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/topologia/trafego_icmp.png}}
     \caption{Tráfego ICMP}
 \end{figure}
 
@@ -114,7 +116,7 @@ O Round-Trip Time médio deverá ser 0.020 ms.
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/topologia/round_trip.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/topologia/round_trip.png}}
     \caption{Round-Trip Time}
 \end{figure}
 
@@ -132,7 +134,7 @@ O endereço IP da interface ativa do nosso computador é 172.26.9.103.
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/default/endereco_ip.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/default/endereco_ip.png}}
     \caption{Endereço IP da interface ativa}
 \end{figure}
 
@@ -144,7 +146,7 @@ O campo protocolo é igual a 1, referente ao protocolo ICMP (Internet Control Me
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/default/campo_protocolo.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/default/campo_protocolo.png}}
     \caption{Valor do campo protocolo}
 \end{figure}
 
@@ -158,7 +160,7 @@ O campo de dados tem um tamanho de 36 bytes. Este valor é calculado através da
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/default/header_total_length.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/default/header_total_length.png}}
     \caption{Header e Total Length}
 \end{figure}
 
@@ -170,7 +172,7 @@ O valor das flags e do offset é igual a 0, logo o pacote não foi fragmentado.
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/default/flags.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/default/flags.png}}
     \caption{Flags e Offset}
 \end{figure}
 
@@ -181,15 +183,14 @@ O valor das flags e do offset é igual a 0, logo o pacote não foi fragmentado.
 Os campos do cabeçalho IP que variam são o campo de identificação e o TTL.
 
 \begin{figure}[hbt!]
-    \minipage{0.49\textwidth}
-        \includegraphics[width=\linewidth]{images/parte1/default/pacote1.png}
+    \minipage{\textwidth}
+        \frame{\includegraphics[width=0.75\linewidth]{images/parte1/default/pacote1.png}}
         \centering
-        \captionsetup{Pacote 1}
     \endminipage\hfill
-    \minipage{0.49\textwidth}
-        \includegraphics[width=\linewidth]{images/parte1/default/pacote2.png}
+    \vspace{0.3cm}
+    \minipage{\textwidth}
+        \frame{\includegraphics[width=0.75\linewidth]{images/parte1/default/pacote2.png}}
         \centering
-        \captionsetup{Pacote 2}
     \endminipage
     \caption{Exemplo de dois pacotes enviados pelo computador}
 \end{figure}
@@ -204,7 +205,7 @@ Na Figura 10 verifica-se que o TTL também é incrementado a cada pacote enviado
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/default/ttl_evolving.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/default/ttl_evolving.png}}
     \caption{Evolução do TTL}
 \end{figure}
 
@@ -221,20 +222,19 @@ A Figura 12 mostra os diferentes valores dos TTL. O primeiro pacote tem TTL=255,
 \end{figure}
 
 \begin{figure}[hbt!]
-    \minipage{0.32\textwidth}
-        \includegraphics[width=\linewidth]{images/parte1/default/ttl_255.png}
+    \minipage{\textwidth}
+        \frame{\includegraphics[width=0.8\linewidth]{images/parte1/default/ttl_255.png}}
         \centering
-        \captionsetup{1º Pacote}
     \endminipage\hfill
-    \minipage{0.32\textwidth}
-        \includegraphics[width=\linewidth]{images/parte1/default/ttl_254.png}
+    \vspace{0.2cm}
+    \minipage{\textwidth}
+        \frame{\includegraphics[width=0.8\linewidth]{images/parte1/default/ttl_254.png}}
         \centering
-        \captionsetup{2º Pacote}
     \endminipage\hfill
-    \minipage{0.32\textwidth}
-        \includegraphics[width=\linewidth]{images/parte1/default/ttl_253.png}
+    \vspace{0.2cm}
+    \minipage{\textwidth}
+        \frame{\includegraphics[width=0.8\linewidth]{images/parte1/default/ttl_253.png}}
         \centering
-        \captionsetup{3º Pacote}
     \endminipage
     \caption{Exemplo de três pacotes consecutivos recebidos pelo computador}
 \end{figure}
@@ -254,7 +254,7 @@ O pacote inicial teve de ser fragmentado, pois este tem 3252 bytes e o MTU (Maxi
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/3252/primeiro_icmp.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/3252/primeiro_icmp.png}}
     \caption{Primeira mensagem ICMP}
 \end{figure}
 
@@ -270,7 +270,7 @@ O tamanho deste datagrama IP é 1500 bytes.
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/3252/primeiro_fragmento.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/3252/primeiro_fragmento.png}}
     \caption{Primeiro fragmento do datagrama IP segmentado}
 \end{figure}
 
@@ -284,7 +284,7 @@ Como o datagrama tem a flag 'More Fragments' a 1, pode-se concluir que há mais 
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/3252/segundo_fragmento.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/3252/segundo_fragmento.png}}
     \caption{Segundo fragmento do datagrama IP segmentado}
 \end{figure}
 
@@ -298,7 +298,7 @@ Sabe-se que este é o último fragmento do datagrama original, pois a flag 'More
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=\textwidth]{images/parte1/3252/ultimo_fragmento.png}
+    \frame{\includegraphics[width=\textwidth]{images/parte1/3252/ultimo_fragmento.png}}
     \caption{Último fragmento do datagrama IP segmentado}
 \end{figure}
 
@@ -337,7 +337,7 @@ A imagem seguinte ilustra os vários endereços IP e a respetiva máscara (255.2
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.5\textwidth]{images/parte2/core.png}
+    \frame{\includegraphics[width=0.5\textwidth]{images/parte2/core.png}}
     \caption{Topologia CORE}
 \end{figure}
 
@@ -591,7 +591,7 @@ Começamos por atribuir o endereço IP manualmente a cada equipamento, seguindo 
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.5\textwidth]{images/parte3/core2.png}
+    \frame{\includegraphics[width=0.5\textwidth]{images/parte3/core2.png}}
     \caption{Topologia CORE com IPs atribuídos manualmente}
 \end{figure}
 
